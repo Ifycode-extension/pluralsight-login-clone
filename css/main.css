@@ -1,0 +1,255 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    color: var(--white);
+}
+
+
+/* ==========
+body-left css 
+============*/
+
+section.body-left {
+    background: var(--dark-mid);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.left-top {
+    width: 100%;
+    height: calc(100vh - var(--footer-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer.left-bottom {
+    position: relative;
+    width: 100%;
+    height: var(--footer-height);
+}
+
+div.left-top__inner,
+section.body-left button,
+div.form__main > * > * {
+    width: 100%;
+}
+
+form.form {
+    width: var(--mid-width);
+    margin: var(--margin-lg) auto 0 auto;
+}
+
+div.form__main > *:not(button) {
+    margin: var(--margin-lg) 0 0 0;
+}
+
+div.form__main > button.signin {
+    margin: var(--margin-sm) 0;
+}
+
+div.form__main img {
+    display: block;
+    margin: 0 auto 50px auto;
+}
+
+div.form__main label {
+    display: block;
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+}
+
+div.form__main input {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--border-light);
+}
+
+div.form-extension {
+   margin: 40px 0;
+}
+
+div.form-extension a {
+    display: block;
+    width: max-content;
+    margin: var(--margin-sm) auto 0 auto;
+    color: var(--blue-light);
+    font-size: 1.1em;
+}
+
+div.form-extension > button {
+    display: block; /*interesting...*/
+    width: var(--mid-width);
+    margin: var(--margin-sm) auto;
+}
+
+hr {
+    border-top: 1px solid var(--border-light);
+    margin: var(--margin-sm) 0 0 0;
+}
+
+footer.left-bottom  button.help {
+    position: absolute;
+    left: 3%;
+    bottom: 10px;
+    background: transparent;
+    width: 26px;
+}
+
+footer.left-bottom  > *:not(button) {
+    width: fit-content;
+    margin: 0 auto 6px auto;
+}
+
+footer.left-bottom  p {
+    text-align: center;
+    width: 90%;
+}
+
+footer.left-bottom  p,
+footer.left-bottom  a {
+    font-size: 0.75em;
+    color: var(--white-trans);
+}
+
+
+/* ===========
+body-right css 
+=============*/
+
+section.body-right {
+    display: none;
+    position: relative;
+    background: url("../img/bg-gtm-2020.png") right center/contain no-repeat, var(--dark);
+}
+
+section.body-right div.svg-container {
+    position: relative;
+}
+
+section.body-right h1 {
+    font-size: 3em;
+    max-width: 380px;
+    margin: -40% 0 0 45px;
+}
+
+section.body-right svg {
+    position: absolute;
+    top: 95px;
+    left: 10px;
+}
+
+section.body-right button.try {
+   position: absolute;
+   left: 10px;
+   bottom: -170px;
+   font-size: 0.95em;
+   color: var(--white);
+   background: var(--gradient);
+   padding: 12px 80px;
+   font-family: 'Roboto', sans-serif;
+}
+
+section.body-right img {
+    position: absolute;
+    max-width: 180px;
+    right: 50px;
+    bottom: 50px;
+}
+
+
+/* ==========
+media-queries 
+============*/
+
+@media screen and (min-width: 480px) {
+    footer.left-bottom  p {
+        width: unset;
+    }
+    
+    footer.left-bottom  p,
+    footer.left-bottom  a {
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px 40px;
+    }
+
+    section.body-left {
+        grid-column: 1/ span 3;
+    }
+
+    section.body-right {
+        grid-column: 4/ span 3;
+        display: flex;
+        align-items: center;
+    }
+
+    div.form-extension > *:not(a) {
+        display: block; /*interesting...*/
+        width: var(--mid-width);
+        margin: var(--margin-sm) auto;
+    }    
+}
+
+@media screen and (min-width: 1340px) {
+    body {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    section.body-left {
+        grid-column: 1/ span 5;
+    }
+
+    section.body-right {
+        grid-column: 6/ span 7;
+    }
+
+    div.left-top {
+        width: 85%;
+    }
+
+    section.body-right h1 {
+        font-size: 3.3em;
+        max-width: 430px;
+        margin: -35% 0 0 90px;
+    }
+
+    section.body-right svg {
+        top: 110px;
+        left: 50px;
+    }
+    
+    section.body-right button.try {
+        left: 50px;
+        bottom: -170px;
+    }
+}
+
+@media screen and (max-height: 690px) {
+    section.body-left {
+        padding: 30px 0;
+    }
+    
+    div.left-top,
+    footer.left-bottom {
+        height: unset;
+    }
+
+    footer.left-bottom {
+        margin: 40px 0 0 0;
+    }
+
+    footer.left-bottom  button.help {
+        bottom: -5px;
+    }
+}

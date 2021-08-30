@@ -1,0 +1,16 @@
+.btn {
+    padding: 12px 0px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background: var(--blue-light);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: var(--dark-bright);
+    color: var(--white);
+}
