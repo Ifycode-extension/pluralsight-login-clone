@@ -6,4 +6,4 @@ Pluralsight login page cloned with HTML5 and css3. View page live at [URL](https
 
 ## Screenshot
 
-<img width="1765" alt="pluralsight-clone" src="https://user-images.githubusercontent.com/45185388/140875244-3148483c-94b5-46de-9573-87a5e5611f1d.png">
+[![pluralsight-login-clone](https://user-images.githubusercontent.com/45185388/140875244-3148483c-94b5-46de-9573-87a5e5611f1d.png)](https://ifycode.github.io/pluralsight-login-clone/)
